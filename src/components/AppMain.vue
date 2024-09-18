@@ -1,20 +1,23 @@
-<script>
-
+<script >
+import MainScroll from './MainScroll.vue';
+export default {
+  data() {
+    return {
+    }
+  },
+  components:{
+    MainScroll
+  }
+}
 </script>
 
 <template>
 <main>
     <div class="content-top-wrapper d-flex align-items-center">
-        <h1>--> CONTENT GOES HERE</h1>
+        <h1> --> CONTENT GOES HERE <--</h1>
     </div>
     <div class="content-bottom-wrapper d-flex align-items-center justify-content-between">
-        <ul class="d-flex">
-            <li>w</li>
-            <li>w</li>
-            <li>w</li>
-            <li>w</li>
-            <li>w</li>
-        </ul>
+        <MainScroll/>
     </div>
 </main>
 </template>
@@ -34,4 +37,4 @@
     background-color: rgb(56, 128, 241);
     color: white;
 }
-</style>
+</style>  

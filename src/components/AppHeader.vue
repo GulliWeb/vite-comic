@@ -42,8 +42,17 @@ nav ul{
 }
 
 nav ul li{
-  margin-right: 20px;
+  margin-right: 30px;
   list-style-type: none;
+}
+
+nav ul li:hover{
+  color: rgb(56, 128, 241);
+  cursor: pointer;
+}
+
+nav ul li:active{
+  color: black;
 }
 
 nav img{
