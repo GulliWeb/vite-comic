@@ -1,55 +1,30 @@
 <script>
+import AppFooterListTop from './AppFooterListTop.vue'
+import AppFooterBottom from './AppFooterBottom.vue'
 export default {
   data() {
     return {
       
     }
+  },
+  components:{
+    AppFooterListTop,
+    AppFooterBottom
   }
 }
 </script>
 
 <template>
-    <footer>
-      <div class="footer-top">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+  <footer>
+    <AppFooterListTop/>
 
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+    <div class="footer-bottom d-flex align-items-center justify-content-between">
+    <AppFooterBottom/>
 
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-
-      <div class="footer-bottom d-flex align-items-center">
-        <button>SIGN-UP NOW!</button>
-
-      </div>
-    </footer>
+    </div>
+  </footer>
+    
+    
 
 </template>
 
