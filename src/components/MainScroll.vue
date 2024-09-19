@@ -42,6 +42,15 @@ ul li{
     text-wrap: nowrap;
 }
 
+ul li:hover{
+    color: lightgray;
+    cursor: pointer;
+}
+
+ul li:active{
+    color: white;
+}
+
 #item-name{
     margin-left: 20px;
     

@@ -1,4 +1,5 @@
 <script >
+import MainContent from './MainContent.vue';
 import MainScroll from './MainScroll.vue';
 export default {
   data() {
@@ -13,8 +14,11 @@ export default {
 
 <template>
 <main>
-    <div class="content-top-wrapper d-flex align-items-center">
-        <h1> --> CONTENT GOES HERE <--</h1>
+    <div class="content-top-wrapper">
+      <figure>
+        <img src="../img/jumbotron.jpg" alt="">
+      </figure>
+      <MainContent/>
     </div>
     <div class="content-bottom-wrapper d-flex align-items-center justify-content-between">
         <MainScroll/>
@@ -23,12 +27,24 @@ export default {
 </template>
 
 <style scoped>
+figure{
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+}
+
+img{
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
 .content-top-wrapper{
-    height: 150px;
+  width: 100%;
     background-color: #000;
 }
 
-.content-top-wrapper > *, .content-bottom-wrapper > *{
+ .content-bottom-wrapper > *{
     margin-left: 320px;
 }
 
