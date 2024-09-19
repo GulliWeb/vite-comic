@@ -18,7 +18,7 @@ export default {
             },
             {
               title: 'Shop',
-              items: ['Shop DC', 'New 52', 'Digital Comics', 'Collectibles', 'Apparel', 'Funko', 'DC Comics Shop Locator']
+              items: ['Shop DC', 'New 52']
             }
           ]
     }
@@ -26,12 +26,49 @@ export default {
 }
 </script>
 
-<template>
-    
+<template> 
+  <div class="footer-top-wrapper">
+    <ul class="d-flex">
+      <li class="mt-5" v-for="(menu, index) in menuItems" :key="index">
+        <strong class="li-title">{{ menu.title }}</strong>
+        <ul>
+          <li v-for="(item, i) in menu.items" :key="i">
+            {{ item }}
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style lang="scss" scoped>
+ul{
+  padding-left: 0;
+  margin-right: 50px;
+  }
+
 ul li{
-    color: white;
+    color: gray;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul:first-child{
+  margin-left: 300px
+}
+
+ul li:hover{
+  color: white;
+  cursor: pointer;
+}
+
+ul li:active{
+  color: lightgray;
+}
+
+.li-title{
+  color: white;
+  font-weight: bold;
+  font-size: larger;
 }
 </style>

@@ -4,17 +4,17 @@ export default {
     return {
         // Creo array di oggetti per popolare la scrollBar
      scrollList: [
-        {src: "../img/buy-comics-digital-comics.png", name: "DIGITAL COMICS"},
-        {src: "../img/buy-comics-merchandise.png", name: "SC MERCHANDISE"},
-        {src: "../img/buy-comics-subscriptions.png", name: "SUBSCRIPTION"},
-        {src: "../img/buy-comics-shop-locator.png", name: "COMIC SHOP LOCATOR"},
-        {src: "../img/buy-dc-power-visa.svg", name: "DC POWER VISA"}
+        {src: "src/img/buy-comics-digital-comics.png", name: "DIGITAL COMICS"},
+        {src: "src/img/buy-comics-merchandise.png", name: "SC MERCHANDISE"},
+        {src: "src/img/buy-comics-subscriptions.png", name: "SUBSCRIPTION"},
+        {src: "src/img/buy-comics-shop-locator.png", name: "COMIC SHOP LOCATOR"},
+        {src: "src/img/buy-dc-power-visa.svg", name: "DC POWER VISA"}
      ] 
     }
   },
   methods:{
     getImageUrl(path){
-        return new URL(path, import.meta.url).href;
+        return new URL(`../${path}`, import.meta.url).href;
     }
   }
 }
@@ -24,7 +24,7 @@ export default {
     <ul class="d-flex justify-content-between">
         <li class="d-flex align-items-center me-5" v-for="item in scrollList">
             <img :src="item.src">
-            <p id="item-name">
+            <p id="item-name" >
                 {{ item.name }}
             </p>
         </li>
@@ -39,13 +39,15 @@ ul{
 
 ul li{
     list-style-type: none;
+    text-wrap: nowrap;
 }
 
 #item-name{
     margin-left: 20px;
+    
 }
 
 ul li img{
-    max-width: 70px;
+    max-width: 50px;
 }
 </style>
