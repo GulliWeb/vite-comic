@@ -89,7 +89,11 @@ export default {
     <div class="card-wrapper d-flex gap-1">
       <div class="card" v-for="comic in comics">
         <img :src=comic.thumb alt="">
-      </div>    
+        <div class="overlay">
+          <h5 class="card-title">{{ comic.series }}</h5>
+          <p class="card-text">{{ comic.price }}</p>
+      </div> 
+      </div>   
     </div>
     <div class="button-wrapper w-100 d-flex justify-content-center">
       <button class="btn btn-primary">LOAD MORE</button>
@@ -105,14 +109,45 @@ export default {
   padding-bottom: 50px;
 }
 .card{
-  flex-basis: calc(100% / 6 - 5px);
+  position: relative;
+  flex-basis: calc(100% / 6 - 50px);
   height: 270px;
   width: 100px;
   border-radius: 12px;
+  margin-right: 30px;
+  margin-bottom: 20px;
 }
 
-img{
+.card img{
   max-height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.card:hover{
+  transform: scale(1.1);
+}
+
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  opacity: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  transition: opacity 0.5s ease;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
 }
 
 button{
@@ -120,5 +155,4 @@ button{
   border: 1px solid white;
   margin-bottom: 10px;
 }
-
 </style>
