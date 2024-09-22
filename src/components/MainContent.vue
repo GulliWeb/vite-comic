@@ -59,8 +59,10 @@ export default {
 }
 
 .card img{
-  max-height: 100%;
+  height: 100%;
+  width: 100%;
   transition: transform 0.5s ease;
+  border-radius: 12px;
 }
 
 .card:hover{
