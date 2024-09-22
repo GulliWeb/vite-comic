@@ -42,12 +42,12 @@ ul li{
     text-wrap: nowrap;
 }
 
-ul li:hover{
+ul li p:hover{
     color: lightgray;
     cursor: pointer;
 }
 
-ul li:active{
+ul li p:active{
     color: white;
 }
 

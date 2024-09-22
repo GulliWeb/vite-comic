@@ -7,7 +7,8 @@ export default {
     }
   },
   components:{
-    MainScroll
+    MainScroll,
+    MainContent
   }
 }
 </script>
