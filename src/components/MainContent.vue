@@ -85,16 +85,40 @@ export default {
 </script>
 
 <template>
-    <div class="card-wrapper d-flex">    
-
+  <h2 class="text-white fw-bold fs-2 text-center pt-2">CURRENT SERIES</h2>
+    <div class="card-wrapper d-flex gap-1">
+      <div class="card" v-for="comic in comics">
+        <img :src=comic.thumb alt="">
+      </div>    
+    </div>
+    <div class="button-wrapper w-100 d-flex justify-content-center">
+      <button class="btn btn-primary">LOAD MORE</button>
     </div>
 </template>
 
 <style lang="scss" scoped> 
-.card{
-  width: 200px;
-  height: 200px;
-  border: 2px dashed purple;
-
+.card-wrapper{
+  flex-wrap: wrap;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-bottom: 50px;
 }
+.card{
+  flex-basis: calc(100% / 6 - 5px);
+  height: 270px;
+  width: 100px;
+  border-radius: 12px;
+}
+
+img{
+  max-height: 100%;
+}
+
+button{
+  padding: 10px 25px;
+  border: 1px solid white;
+  margin-bottom: 10px;
+}
+
 </style>
