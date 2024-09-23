@@ -32,7 +32,6 @@ Welcome to **Vite Comic**, an application developed with Vue.js to explore a sel
     ```bash
     npm run dev
 
-
 ## Usage
 
 Once the application is running, you can explore the comics on the main page. Hover over the cards to see an overlay with the title and price of the comic.
